@@ -10,7 +10,7 @@ from langchain.chains.question_answering import load_qa_chain
 # Replace book.pdf with any pdf of your choice
 loader = UnstructuredPDFLoader("Rich-Dad-Poor-Dad.pdf")
 pages = loader.load_and_split()
-os.environ["OPENAI_API_KEY"]="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"
+os.environ["OPENAI_API_KEY"]=" " #enter your key 
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma.from_documents(pages, embeddings).as_retriever()
 
